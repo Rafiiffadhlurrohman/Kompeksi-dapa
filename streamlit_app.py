@@ -39,7 +39,7 @@ def subtract_stock(data, name, size, quantity):
 
 # Streamlit app
 def main():
-    st.title("Konfeksi Dava")
+    st.title("Konfeksi Dava :rainbow[Volume Tabung] :rocket")
 
     filename = 'data_stok_kompeksi.txt'
     data = load_data(filename)
@@ -50,7 +50,7 @@ def main():
     if choice == "Tambah Stok":
         st.subheader("Tambah Stok")
         name = st.text_input("Nama Produk")
-        size = st.selectbox("Ukuran", ["S", "M", "L", "XL"])
+        size = st.selectbox("Ukuran", ["S", "M", "L", "XL", "XXL"])
         quantity = st.number_input("Jumlah", min_value=0, step=1)
         if st.button("Tambah"):
             if name and size and quantity > 0:
@@ -63,7 +63,7 @@ def main():
     elif choice == "Kurangi Stok":
         st.subheader("Kurangi Stok")
         name = st.text_input("Nama Produk")
-        size = st.selectbox("Ukuran", ["S", "M", "L", "XL"])
+        size = st.selectbox("Ukuran", ["S", "M", "L", "XL", "XXL"])
         quantity = st.number_input("Jumlah", min_value=0, step=1)
         if st.button("Kurangi"):
             if name and size and quantity > 0:

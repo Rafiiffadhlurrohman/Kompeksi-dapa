@@ -39,7 +39,7 @@ def subtract_stock(data, name, size, quantity):
 
 # Streamlit app
 def main():
-    st.title("Aplikasi Manajemen Stok Kompeksi")
+    st.title("Konfeksi Dava")
 
     filename = 'data_stok_kompeksi.txt'
     data = load_data(filename)
